@@ -8,24 +8,24 @@
 
 void add()
 {
-	float result1, result2, frac11, frac12, frac21, frac22; // result1 = nom result   result2 den result
+        float result1, result2,result3, frac11, frac12, frac21, frac22; // result1 = nom result   result2 den result
 
-	printf("\nNow, choose the fraction's terms !  ( float-enter*4 )\n");
-	scanf("%f %f  %f %f", &frac11, &frac12, &frac21, &frac22);
-	printf("%f %f  %f %f", frac11, frac12, frac21, frac22);
-		if(frac12==frac22)		/*si les denominateurs sont egaux*/
-			{
-				result2=frac12;		/*le denominateur de la somme est egal au denominateur de frac1*/
-				result1=frac11+frac21;	/*le numerateur est egal a la somme des 2 autres numerateurs*/
-				printf(" \n You wanted (%0.2f / %0.2f ) + ( %0.2f / %0.2f ) and the result is %0.2f / %0.2f \n " , frac11, frac12, frac21, frac22, result1, result2);
-			}
-		else				/*si les denominateurs ne sont pas egaux*/
-			{
-				result2=frac12*frac22;		/*le denominateur  est  egal au produit des 2 autres*/
-				result1=(frac11*frac22)+(frac21*frac12); 	/*le numerateur est  egal à (frac1.num)(frac2.den)+(frac2.num)(frac1.den)*/
-				printf(" \n You wanted (%0.2f / %0.2f ) + ( %0.2f / %0.2f ) and the result is %0.2f / %0.2f \n " , frac11, frac12, frac21, frac22, result1, result2);
-			}
-	
+        printf("\nNow, choose the fraction's terms !  ( float-enter*4 )\n");
+        scanf("%f %f  %f %f", &frac11, &frac12, &frac21, &frac22);
+                if(frac12==frac22)                /*si les denominateurs sont egaux*/
+                        {
+                                result2=frac12;                /*le denominateur de la somme est egal au denominateur de frac1*/
+                                result1=frac11+frac21;        /*le numerateur est egal a la somme des 2 autres numerateurs*/
+                                printf(" \n You wanted (%0.2f/%0.2f ) + (%0.2f/%0.2f)\n And the result is %0.2f/%0.2f \n Or in decimal %0.2f \n " , frac11, frac12, frac21, frac22, result1, result2, result3);
+                        }
+                else                                /*si les denominateurs ne sont pas egaux*/
+                        {
+                                result2=frac12*frac22;                /*le denominateur  est  egal au produit des 2 autres*/
+                                result1=(frac11*frac22)+(frac21*frac12);         /*le numerateur est  egal à (frac1.num)(frac2.den)+(frac2.num)(frac1.den)*/
+                                result3=result1/result2;
+                                printf(" \n You wanted (%0.2f/%0.2f ) + (%0.2f/%0.2f)\n And the result is %0.2f/%0.2f \n Or in decimal %0.2f\n " , frac11, frac12, frac21, frac22, result1, result2,result3);
+                        }
+
 }
 
 void substract()
@@ -65,13 +65,13 @@ void product()
 int main(void)
 {
    //List
-   
+
    int operator;
    operator = 0;
     //Operator choice
-    
+
     while (42)
-   { 
+   {
 
         printf(" \n                        OPERATOR SELECTION MENU  \n");
         printf("                        1. Addition        \n");
