@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-//void ecrire_fichier ()
+//void save()
 
 void add()
 {
